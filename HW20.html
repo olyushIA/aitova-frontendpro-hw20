@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+        function pow(num, degree) {
+        // Якщо ступінь 0, то повертається завжди одиниця
+
+        if (degree === 0) {
+            return 1;
+        }
+
+        // Якщо ступінь - позитивне число, 
+        // для кожного рекурсивного кола ми множимо результат на число
+  
+        if (degree > 0) {
+            return num * pow(num, degree - 1);
+        }
+
+        // 
+        if (degree < 0) {
+            return 1 / (num * pow(num, Math.abs(degree) - 1));
+        }
+        }          
+    </script>
+</body>
+</html>
